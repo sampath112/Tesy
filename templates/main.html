@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="d.css"
+    <title>Regression Line</title>
+</head>
+<body>
+    <div>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="csv_file">
+            <button type="submit">Upload</button>
+        </form>
+       
+        {% if graphic %}
+            <p>Slope m is {{b0}}</p>
+            <p>Value of C is {{b1}}</p>
+            <img src="data:image/png;base64,{{ graphic }}" alt="Regression Line" />
+            <p>the value of R2 is {{r2}}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
